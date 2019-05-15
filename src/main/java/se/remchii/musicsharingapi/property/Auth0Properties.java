@@ -7,6 +7,7 @@ public class Auth0Properties {
 
     private String apiAudience;
     private String issuer;
+    private String domain;
 
     public String getApiAudience() {
         return apiAudience;
@@ -22,5 +23,13 @@ public class Auth0Properties {
 
     public void setIssuer(String issuer) {
         this.issuer = issuer;
+    }
+
+    public String getDomain() {
+        return domain;
+    }
+
+    public void setDomain(String domain) {
+        this.domain = domain;
     }
 }

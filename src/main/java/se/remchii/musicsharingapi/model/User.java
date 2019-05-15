@@ -11,14 +11,25 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String auth0Id;
     private String username;
     private String email;
 
     public User() {
     }
 
+    public User(String auth0Id, String username, String email) {
+        this.auth0Id = auth0Id;
+        this.username = username;
+        this.email = email;
+    }
+
     public Long getId() {
         return id;
+    }
+
+    public String getAuth0Id() {
+        return auth0Id;
     }
 
     public String getUsername() {
@@ -41,6 +52,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
+                ", auth0Id='" + auth0Id + '\'' +
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 '}';

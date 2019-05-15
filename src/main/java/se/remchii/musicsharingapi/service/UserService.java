@@ -14,7 +14,8 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public User addUser(UserRegistration user) {
+    public User addUser(UserRegistration userInfo) {
+        System.out.println(userInfo);
         return new User();
     }
 }
